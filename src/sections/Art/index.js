@@ -10,14 +10,13 @@ function ArtsSection() {
     fetch(specificFieldsApiURL)
       .then(res => res.json())
       .then(data => {
-        console.log('raw art data',data.data)
+        // console.log('raw art data',data.data)
         setAllArtData(data.data)})
   }, [])
 
   return (
     <section>
       <h2>Arts Section</h2>
-      <button onClick={() => console.log('artstate',allArtData)}>TEST</button>
       <div className="scroll-container">
         <ArtList allArtData={allArtData} />
       </div>

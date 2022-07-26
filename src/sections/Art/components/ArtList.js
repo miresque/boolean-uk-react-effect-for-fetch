@@ -11,7 +11,7 @@ function ArtList(props) {
             <ArtListItem 
             title={info.title}
             artist={info.artist_title}
-            artistSubjects={info.subject_ids}
+            artistSubjects={info.subject_titles}
             imageID={info.image_id}
             key={i}
             />

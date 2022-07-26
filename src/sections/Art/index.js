@@ -6,7 +6,7 @@ function ArtsSection() {
   
   useEffect(() => {
     const apiURL = 'https://api.artic.edu/api/v1/artworks'
-    const specificFieldsApiURL = 'https://api.artic.edu/api/v1/artworks?fields=artist_title,title,subject_ids,image_id'
+    const specificFieldsApiURL = 'https://api.artic.edu/api/v1/artworks?fields=artist_title,title,subject_titles,image_id'
     fetch(specificFieldsApiURL)
       .then(res => res.json())
       .then(data => {

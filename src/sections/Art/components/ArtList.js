@@ -10,6 +10,9 @@ function ArtList(props) {
         return (
             <ArtListItem 
             title={info.title}
+            artist={info.artist_title}
+            artistSubjects={info.subject_ids}
+            imageID={info.image_id}
             key={i}
             />
             )

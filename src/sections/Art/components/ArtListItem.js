@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import SubjectList from './SubjectList'
 
 function ArtListItem(props) {
   const {title, artist, artistSubjects, imageID} = props
@@ -20,16 +21,7 @@ function ArtListItem(props) {
         <h3>{artData.title}</h3>
         <p>Artist: {artData.artist}</p>
         { artData.artist_subjects.length > 0 && 
-            <>
-            <h4>Artistic Subjects:</h4>
-            <ul>
-                {artData.artist_subjects.map((subj) => {
-                return (
-                    <li>{subj}</li>
-                    )   
-                })}
-            </ul>
-            </>
+            <SubjectList artData={artData} />
         }
     </li>
   )
